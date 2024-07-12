@@ -1,39 +1,60 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import "./Sidebar.css"
 import {assets} from "../../assets/asset"
+import { Context } from '../../context/Context'
 
 const Sidebar = () => {
+
+const [extended, setExtended] = useState(false)
+const {onSent, prevPrompt, setRecentPrompt, newChat} = useContext(Context)
+
+const loadPrompt = async (prompt) =>{
+    setRecentPrompt(prompt)
+    await onSent(prompt)
+}
+    
   return (
     <div className="sidebar">
         <div className="top">
-            <img className='menu' id="icon" src={assets.Menu_icon} alt="" />
+            <img onClick={()=>setExtended(prev=>!prev)} className='menu' id="icon" src={assets.Menu_icon} alt="" />
             
-            <div className="new-chat">
+            <div onClick={newChat} className="new-chat">
                 <img id='icon' src={assets.Plus_icon} alt="" />
-                <p>New Chat</p>
+                {extended?<p>New Chat</p>:null}
             </div>
-            <div className="recent">
+            {extended
+            ? <div className="recent">
                 <p className="recent-title">Recent</p>
-                <div className="recent-entry">
+                {prevPrompt.map((item, index)=>{
+                    return(
+                        <div onClick={()=>loadPrompt(item)} className="recent-entry">
                     <img id='icon' src={assets.Message_icon} alt="" />
-                    <p>What is react ...</p>
+                    <p>{item.slice(0,18)}...</p>
                 </div>
+                    )
+                })}
+                
             </div>
+            :null
+            }
+
+
         </div>
 
 
         <div className="bottom">
             <div className="bottom-item">
                 <img id='icon' src={assets.Question_icon} alt="" />
-                <p>Help</p>
+                {extended?<p>Help</p>:null} 
             </div>
             <div className="bottom-item">
                 <img id='icon' src={assets.History_icon} alt="" />
-                <p>Activity</p>
+                {extended?<p>Activity</p>:null} 
+                
             </div>
             <div className="bottom-item">
                 <img id='icon' src={assets.Setting_icon} alt="" />
-                <p>Setting</p>
+                {extended?<p>Setting</p>:null}
             </div>
         </div>
     </div>

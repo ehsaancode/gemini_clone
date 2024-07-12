@@ -13,6 +13,8 @@ import Question_icon from "./Question_icon.png"
 import Send_icon from "./Send_icon.png"
 import Setting_icon from "./Setting_icon.png"
 import User_icon from "./User_icon.png"
+import Logo from "./Logo.png"
+
 
 export const assets = {
     User_icon,
@@ -29,5 +31,6 @@ export const assets = {
     Gemini_icon,
     Code_icon, 
     Add_img_icon, 
-    Bulb_icon
+    Bulb_icon,
+    Logo
 }
