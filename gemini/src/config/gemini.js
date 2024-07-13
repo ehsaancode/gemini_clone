@@ -1,13 +1,4 @@
-// const apiKey = "AIzaSyC105Hm-p3an8B-pbIsyDS7MAJg0iIjVR0"
 
-/*
- * Install the Generative AI SDK
- *
- * $ npm install @google/generative-ai
- *
- * See the getting started guide for more information
- * https://ai.google.dev/gemini-api/docs/get-started/node
- */
 
 import {
     GoogleGenerativeAI,
@@ -15,9 +6,7 @@ import {
     HarmBlockThreshold,
   } from "@google/generative-ai";
   
-  const apiKey = "AIzaSyA1lMxDQd-Yz7oP_mIsCVA4rDEIbiL09Ms";
-// const apiKey = import.meta.env.VITE_KEY
-// console.log(apiKey)
+  const apiKey = "xxxxxxxxxx";
 
 
   const genAI = new GoogleGenerativeAI(apiKey);
@@ -52,65 +41,3 @@ import {
   
   export default run;
 
-
-
-
-
-
-// /*
-//  * Install the Generative AI SDK
-//  *
-//  * $ npm install @google/generative-ai
-//  *
-//  * See the getting started guide for more information
-//  * https://ai.google.dev/gemini-api/docs/get-started/node
-//  */
-
-// import {
-//     GoogleGenerativeAI,
-//     HarmCategory,
-//     HarmBlockThreshold,
-//   } from ("@google/generative-ai");
-  
-//   const apiKey = process.env.GEMINI_API_KEY;
-//   const genAI = new GoogleGenerativeAI(apiKey);
-  
-//   const model = genAI.getGenerativeModel({
-//     model: "gemini-1.5-flash",
-//     systemInstruction: "Use \"hey there, this is ehsaan's AI\" at starting of the response",
-//   });
-  
-//   const generationConfig = {
-//     temperature: 1,
-//     topP: 0.95,
-//     topK: 64,
-//     maxOutputTokens: 8192,
-//     responseMimeType: "text/plain",
-//   };
-  
-//   async function run() {
-//     const chatSession = model.startChat({
-//       generationConfig,
-//    // safetySettings: Adjust safety settings
-//    // See https://ai.google.dev/gemini-api/docs/safety-settings
-//       history: [
-//         {
-//           role: "user",
-//           parts: [
-//             {text: "write about react in short"},
-//           ],
-//         },
-//         {
-//           role: "model",
-//           parts: [
-//             {text: "hey there, this is ehsaan's AI \n\nReact is a popular JavaScript library used for building user interfaces (UIs). It's known for its:\n\n* **Component-based architecture:** Breaking down UIs into reusable components, making development easier and more maintainable.\n* **Virtual DOM:**  React uses a virtual representation of the DOM, making updates efficient and fast.\n* **Declarative programming:**  You describe how your UI should look, and React takes care of the updates, reducing boilerplate code.\n* **Large community and ecosystem:** Lots of resources, libraries, and support available.\n\nReact is often used for web applications, but it can also be used for building mobile apps (React Native) and even desktop apps (Electron). \n"},
-//           ],
-//         },
-//       ],
-//     });
-  
-//     const result = await chatSession.sendMessage("INSERT_INPUT_HERE");
-//     console.log(result.response.text());
-//   }
-  
-//   run();
