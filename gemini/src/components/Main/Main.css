@@ -188,18 +188,38 @@
     line-height: 1.8 ;
 }
 
-@media(max-width:412px){
+@media(max-width:600px){
+    *{
+        padding: 0px 2px;
+        margin: 2px;
+    }
+    .main {
+        padding-bottom: 14vh;
+    }
+    .main .card p{
+        font-size: 14px;
+    }
     .main .greet{
-        font-size: 40px;
+        font-size: 30px;
+        margin: 0px 4px;
     }
     .main .nav{
-        font-size: 20px;
+        font-size: 16px;
     }
     .main .nav img{
         width: 30px;
     }
     .main .cards{
         grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        margin-top: 14px;
+    }
+    .main .card{
+        height: 162px;
+        padding: 14px;
+    }
+    .main-bottom {
+        /* padding: 231px 20px; */
+        margin-bottom: 10px;
     }
     .main-bottom input{
         flex: none;
@@ -230,5 +250,15 @@
     }
     .result img{
         width: 30px;
+    }
+    .result-data p {
+        font-size: 13px;
+        
+    }
+    .result-data {
+        margin: 40px 20px;
+    }
+    .result-title{
+        margin: 40px 20px;
     }
 }

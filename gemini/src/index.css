@@ -24,3 +24,10 @@ font-family: Outfit;
   }
 
 }
+
+/* @media(max-width: 412px){
+  #root{
+    min-height: 100vh;
+
+  }
+} */

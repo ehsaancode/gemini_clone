@@ -73,4 +73,7 @@
     .sidebar{
         display: none;
     }
+    *{
+        margin: 0px 4px 0px 3px;
+    }
 }
