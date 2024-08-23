@@ -8,8 +8,7 @@ To get started with the project, follow these steps:
 
 	1.	Clone the repository:
 
-git clone https://github.com/ehsaancode/gemini-clone-react.git
-cd gemini-clone-react
+git clone [https://github.com/ehsaancode/gemini-clone-react.git](https://github.com/ehsaancode/gemini_clone.git)
 
 
 	2.	Install dependencies:
