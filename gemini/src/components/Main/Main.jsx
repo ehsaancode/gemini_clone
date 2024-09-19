@@ -27,8 +27,7 @@ const Main = () => {
         </div>
         <div className="cards">
           <div className="card">
-            {/* <p>Need suggestion beautiful places to visit? ask me!</p> */}
-            <p>Trouble deciding which saree or lehenga to wear for the function? Let me assist you in making a choice! 🤭</p>
+            <p>Need suggestions for beautiful places to visit? ask me!</p>
             <img src={assets.Compass_icon} alt="" />
           </div>
           <div className="card">
