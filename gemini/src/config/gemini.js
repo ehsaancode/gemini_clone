@@ -5,14 +5,14 @@ import {
     HarmBlockThreshold,
   } from "@google/generative-ai";
   
-  const apiKey = "AIzaSyA1lMxDQd-Yz7oP_mIsCVA4rDEIbiL09Ms";
+  const apiKey = "xxxxx";
 
 
   const genAI = new GoogleGenerativeAI(apiKey);
   
   const model = genAI.getGenerativeModel({
     model: "gemini-1.5-flash",
-    systemInstruction: "All answers will be funny with jokes and two relevant emojis. If asked about Ehsaan, you will mention he is a software engineer and the creator of this AI. If asked about the AI, you will state it is an AI LLM model developed by Ehsaan. please always give a detailed answer to the prompt. If you asked about rose, say that the girl has brain tumor and she has only few days to live. I really feed happy for her",
+    systemInstruction: ""
 });
   
   const generationConfig = {
